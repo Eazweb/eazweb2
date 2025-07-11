@@ -3,24 +3,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: hsl(215, 100%, 79%);
+
+  --color-jordy-blue-50: hsl(217, 100%, 97%);
+  --color-jordy-blue-100: hsl(217, 100%, 93%);
+  --color-jordy-blue-200: hsl(217, 100%, 87%);
+  --color-jordy-blue-300: hsl(215, 100%, 79%);
+  --color-jordy-blue-400: hsl(216, 98%, 68%);
+  --color-jordy-blue-500: hsl(221, 95%, 60%);
+  --color-jordy-blue-600: hsl(225, 87%, 53%);
+  --color-jordy-blue-700: hsl(228, 80%, 48%);
+  --color-jordy-blue-800: hsl(229, 74%, 40%);
+  --color-jordy-blue-900: hsl(228, 67%, 33%);
+  --color-jordy-blue-950: hsl(230, 59%, 21%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --font-funnelDisplay: var(--font-funnelDisplay);
+  --font-redHatDisplay: var(--font-redHatDisplay);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary-50: var(--color-jordy-blue-50);
+  --color-primary-100: var(--color-jordy-blue-100);
+  --color-primary-200: var(--color-jordy-blue-200);
+  --color-primary-300: var(--color-jordy-blue-300);
+  --color-primary-400: var(--color-jordy-blue-400);
+  --color-primary-500: var(--color-jordy-blue-500);
+  --color-primary-600: var(--color-jordy-blue-600);
+  --color-primary-700: var(--color-jordy-blue-700);
+  --color-primary-800: var(--color-jordy-blue-800);
+  --color-primary-900: var(--color-jordy-blue-900);
+  --color-primary-950: var(--color-jordy-blue-950);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-redHatDisplay);
 }
