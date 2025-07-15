@@ -17,6 +17,8 @@
   --color-jordy-blue-800: hsl(229, 74%, 40%);
   --color-jordy-blue-900: hsl(228, 67%, 33%);
   --color-jordy-blue-950: hsl(230, 59%, 21%);
+
+  
 }
 
 @theme {
@@ -34,10 +36,106 @@
   --color-primary-800: var(--color-jordy-blue-800);
   --color-primary-900: var(--color-jordy-blue-900);
   --color-primary-950: var(--color-jordy-blue-950);
+
+  --animation-scroll: scroll 300s linear infinite;
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: var(--animation-scroll);
+  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-redHatDisplay);
+}
+
+@layer components{
+  .contact-label{
+    @apply text-base leading-none text-neutral-400;
+  }
+  .contact-input{
+    @apply w-full border-b border-neutral-600 bg-transparent py-2.5 text-neutral-200 placeholder:text-neutral-400 focus:outline-none font-semibold placeholder:font-normal leading-none;
+  }
+  .btn-primary{
+    @apply cursor-pointer hover:bg-neutral-800 bg-neutral-700 text-neutral-200 px-4 py-2 rounded-full font-semibold transition-all duration-300;
+  }
+}
+
+@keyframes blob1 {
+  0% {
+    transform: translate(-18%, -28%) scale(0.88);
+  }
+  15% {
+    transform: translate(-8%, -38%) scale(1.12);
+  }
+  35% {
+    transform: translate(12%, -18%) scale(0.92);
+  }
+  55% {
+    transform: translate(8%, -3%) scale(1.08);
+  }
+  75% {
+    transform: translate(-12%, -18%) scale(0.95);
+  }
+  90% {
+    transform: translate(-20%, -22%) scale(1.02);
+  }
+  100% {
+    transform: translate(-18%, -28%) scale(0.88);
+  }
+}
+@keyframes blob2 {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  18% {
+    transform: translate(-22%, -12%) scale(0.98);
+  }
+  38% {
+    transform: translate(-58%, -28%) scale(1.05);
+  }
+  58% {
+    transform: translate(-135%, -8%) scale(0.92);
+  }
+  78% {
+    transform: translate(-95%, -2%) scale(1.08);
+  }
+  92% {
+    transform: translate(-15%, -5%) scale(0.95);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+@keyframes blob3 {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  22% {
+    transform: translate(8%, 12%) scale(1.02);
+  }
+  44% {
+    transform: translate(18%, 18%) scale(0.98);
+  }
+  66% {
+    transform: translate(12%, 8%) scale(1.05);
+  }
+  88% {
+    transform: translate(-2%, 3%) scale(0.97);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
