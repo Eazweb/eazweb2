@@ -17,8 +17,6 @@
   --color-jordy-blue-800: hsl(229, 74%, 40%);
   --color-jordy-blue-900: hsl(228, 67%, 33%);
   --color-jordy-blue-950: hsl(230, 59%, 21%);
-
-  
 }
 
 @theme {
@@ -38,6 +36,8 @@
   --color-primary-950: var(--color-jordy-blue-950);
 
   --animation-scroll: scroll 300s linear infinite;
+
+  --breakpoint-xs: 490px;
 }
 
 @layer utilities {
@@ -52,15 +52,15 @@ body {
   font-family: var(--font-redHatDisplay);
 }
 
-@layer components{
-  .contact-label{
+@layer components {
+  .contact-label {
     @apply text-base leading-none text-neutral-400;
   }
-  .contact-input{
-    @apply w-full border-b border-neutral-600 bg-transparent py-2.5 text-neutral-200 placeholder:text-neutral-400 focus:outline-none font-semibold placeholder:font-normal leading-none;
+  .contact-input {
+    @apply w-full border-b border-neutral-600 bg-transparent py-2.5 leading-none font-semibold text-neutral-200 placeholder:font-normal placeholder:text-neutral-400 focus:outline-none;
   }
-  .btn-primary{
-    @apply cursor-pointer hover:bg-neutral-800 bg-neutral-700 text-neutral-200 px-4 py-2 rounded-full font-semibold transition-all duration-300;
+  .btn-primary {
+    @apply cursor-pointer rounded-full bg-neutral-700 px-4 py-2 font-semibold text-neutral-200 transition-all duration-300 hover:bg-neutral-800;
   }
 }
 

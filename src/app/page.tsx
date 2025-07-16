@@ -41,14 +41,14 @@ export default function HomePage() {
             <button className="hidden rounded-full border-2 border-white px-4 py-2 text-sm text-white sm:block">
               Menu
             </button>
-            <div className="text-2xl font-bold tracking-tighter sm:hidden ">
+            <div className="text-2xl font-bold tracking-widest sm:hidden ">
               EAZWEB
             </div>
           </div>
 
           {/* Middle Section: EAZWEB on large, hidden on small */}
           <div className="flex flex-1 justify-center">
-            <div className="hidden text-2xl font-bold tracking-tighter sm:block">
+            <div className="hidden text-2xl font-bold tracking-widest sm:block">
               EAZWEB
             </div>
           </div>
