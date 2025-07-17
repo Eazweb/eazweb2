@@ -2,6 +2,7 @@
 'use client';
 
 import { projects, Project } from '@/lib/projects';
+import Link from 'next/link';
 
 interface ProjectListProps {
   onProjectHover: (project: Project | null) => void;
@@ -24,7 +25,7 @@ const ProjectList = ({ onProjectHover, hoveredProject }: ProjectListProps) => {
             onMouseLeave={() => onProjectHover(null)}
             className={`${baseStyle} ${isHovered ? hoveredStyle : normalStyle}`}
           >
-            {project.title}
+            <Link href={`/${project.slug}`}>{project.title}</Link>
           </li>
         );
       })}

@@ -2,6 +2,7 @@
 export interface Project {
     id: number;
     title: string;
+    slug: string;
     category: string;
     bgImage: string;
     smallImage: string;
@@ -12,14 +13,14 @@ export interface Project {
     };
     animation: {
       bgImage: {
-        initial: { opacity: number; [key: string]: any };
-        animate: { opacity: number; [key: string]: any };
-        exit: { opacity: number; [key: string]: any };
+        initial: { opacity: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
+        animate: { opacity: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
+        exit: { opacity: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
       };
       smallImage: {
-        initial: { opacity?: number; [key: string]: any };
-        animate: { opacity?: number; [key: string]: any };
-        exit: { opacity?: number; [key: string]: any };
+        initial: { opacity?: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
+        animate: { opacity?: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
+        exit: { opacity?: number; scale?: number; x?: number | string; y?: number | string; rotate?: number | string; clipPath?: string; filter?: string };
       };
       content: {
         initial: { opacity: number; y?: number | string; x?: number | string };
@@ -33,6 +34,7 @@ export interface Project {
     {
       id: 1,
       title: 'Sleek Studio',
+      slug: 'sleek_studio',
       category: 'Web Development',
       bgImage: 'https://res.cloudinary.com/dzrsboari/image/upload/v1752554710/_DSC4576_kebc5u.webp',
       smallImage: 'https://res.cloudinary.com/dzrsboari/image/upload/v1752554710/_DSC4576_kebc5u.webp',
@@ -62,6 +64,7 @@ export interface Project {
     {
       id: 2,
       title: 'Luxury Machines',
+      slug: 'luxury_machines',
       category: 'UI/UX Design',
       bgImage: '/projectimages/luxurymachines/herobg.jpg',
       smallImage: '/projectimages/luxurymachines/herobg.jpg',
@@ -91,6 +94,7 @@ export interface Project {
     {
       id: 3,
       title: 'Switchfixx Electrical',
+      slug: 'switch_fixx',
       category: 'Branding',
       bgImage: '/projectimages/switchfixx/herobg.jpg',
       smallImage: '/projectimages/switchfixx/herobg.jpg',
@@ -120,6 +124,7 @@ export interface Project {
     {
       id: 4,
       title: 'Luxx Design',
+      slug: 'luxx',
       category: 'Web Development',
       bgImage: '/projectimages/luxx/herobg.jpg',
       smallImage: '/projectimages/luxx/herobg.jpg',
@@ -149,6 +154,7 @@ export interface Project {
     {
       id: 5,
       title: 'Portfolio',
+      slug: 'portfolio',
       category: 'UI/UX Design',
       bgImage: '/projectimages/portfolio/herobg.webp',
       smallImage: '/projectimages/portfolio/herobg.webp',
@@ -177,7 +183,8 @@ export interface Project {
     },
     {
       id: 6,
-      title: 'Sia Graphics',
+      title: 'Suburbia Skate',
+      slug: 'suburbia_skate',
       category: 'Branding',
       bgImage: 'https://res.cloudinary.com/dzrsboari/image/upload/v1752554710/_DSC4576_kebc5u.webp',
       smallImage: 'https://res.cloudinary.com/dzrsboari/image/upload/v1752554710/_DSC4576_kebc5u.webp',
@@ -206,7 +213,8 @@ export interface Project {
     },
     {
       id: 7,
-      title: 'Project Eta',
+      title: 'Alex Varga',
+      slug: 'alex_varga',
       category: 'Web Development',
       bgImage: '/projectimages/luxurymachines/herobg.jpg',
       smallImage: '/projectimages/luxurymachines/herobg.jpg',
